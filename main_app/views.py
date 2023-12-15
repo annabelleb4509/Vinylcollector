@@ -55,7 +55,6 @@ class VinylDelete(DeleteView):
   success_url = '/vinyls'
 
 
-
 class GenreList(ListView):
   model = Genre
 
