@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h2>All Vinyls</h2>
+<br>
+
+{% for vinyl in vinyls %}
+   <div class="card">
+    <a href="/vinyls/{{ vinyl.id }}">
+      <div class="card-content  grey-text text-darken-2">
+        <span class="card-title">{{ vinyl.title }}</span>
+        <p>Artist: {{ vinyl.artist }}</p>
+        <p>Genre: {{ vinyl.genre | linebreaks }}</p>
+        <p>Released: {{ vinyl.released }}</p>
+
+      </div>
+    </div>
+  </a>
+{% endfor %}
+
+{% endblock %}
